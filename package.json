@@ -9,6 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/cloudinary": "^1.0.3-beta-4",
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3"
   },
