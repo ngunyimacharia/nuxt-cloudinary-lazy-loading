@@ -18,7 +18,8 @@
           md:text-4xl
         "
       >
-        Welcome to Lightning deals
+        {{ board.name }}
+        {{ backgroundImage }}
       </h1>
       <img
         class="w-full object-cover h-72 block mx-auto sm:block sm:w-full"
@@ -30,3 +31,22 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    board: {
+      type: Object,
+      required: true,
+    },
+  },
+  computed: {
+    backgroundImage() {
+      const image =
+        this.board.images[Math.floor(Math.random() * this.board.images.length)]
+      console.log(image)
+      return image
+    },
+  },
+}
+</script>
