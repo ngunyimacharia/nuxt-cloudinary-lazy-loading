@@ -42,6 +42,7 @@ export default {
   modules: [
     '@nuxtjs/cloudinary',
     '@nuxtjs/axios',
+    'nuxt-lazy-load'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
