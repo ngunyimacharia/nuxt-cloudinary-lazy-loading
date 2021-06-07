@@ -47,7 +47,6 @@ export default {
     backgroundImage() {
       const image =
         this.board.images[Math.floor(Math.random() * this.board.images.length)]
-      console.log(image)
       return image
     },
   },
