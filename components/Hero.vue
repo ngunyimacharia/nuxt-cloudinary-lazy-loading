@@ -29,6 +29,7 @@
         fetchFormat="auto"
         quality="auto"
         :alt="`${board.name} hero image`"
+        loading="lazy"
       />
     </div>
   </div>
