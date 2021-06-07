@@ -59,6 +59,7 @@ export default {
   },
 
   cloudinary: {
-    cloudName: process.env.CLOUDINARY_CLOUD_NAME
+    cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+    useComponent: true
   },
 }
