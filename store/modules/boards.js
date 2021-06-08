@@ -1,8 +1,8 @@
 export const state = () => ({
     boards: [
-        { name: "cars", images: [] },
-        { name: "houses", images: [] },
-        { name: "vacation", images: [] }
+        { name: "cars", images: [], videos: [] },
+        { name: "houses", images: [], videos: [] },
+        { name: "vacation", images: [], videos: [] }
     ]
 })
 
@@ -16,11 +16,21 @@ export const actions = {
 
         for (const index in boards) {
 
-            const url = `http://res.cloudinary.com/${cloudName}/image/list/${boards[index].name}.json`;
+            const imageUrl = `http://res.cloudinary.com/${cloudName}/image/list/${boards[index].name}.json`;
 
-            const images = await axios.$get(url);
+            const images = await axios.$get(imageUrl);
 
             boards[index].images = images.resources;
+
+            const videoUrl = `http://res.cloudinary.com/${cloudName}/video/list/${boards[index].name}.json`;
+
+            console.log(videoUrl);
+
+            const videos = await axios.$get(videoUrl);
+
+            console.log(videos);
+
+            boards[index].videos = videos.resources;
 
         }
 
